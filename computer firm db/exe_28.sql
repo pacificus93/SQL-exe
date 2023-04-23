@@ -1,3 +1,7 @@
+/*
+Using Product table, find out the number of makers who produce only one model.
+*/
+
 SELECT COUNT(*) 
 FROM (
 	SELECT maker 
