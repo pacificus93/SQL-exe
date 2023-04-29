@@ -6,7 +6,7 @@ WITH tt AS (
 	SELECT pd.maker 
 	FROM product AS pd 
 	GROUP BY pd.maker 
-	HAVING count(distinct pd.type) = 1)
+	HAVING COUNT(distinct pd.type) = 1)
 
 SELECT tt.* 
 FROM tt 
@@ -20,4 +20,4 @@ JOIN (
 	SELECT maker,type 
 	FROM product 
 	GROUP BY maker,type 
-	HAVING count(model) >= 3) AS t ON t.maker = tt.maker AND t.type IN ('PC')
+	HAVING COUNT(model) >= 3) AS t ON t.maker = tt.maker AND t.type IN ('PC')
