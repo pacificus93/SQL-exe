@@ -12,7 +12,7 @@ SELECT tt.*
 FROM tt 
 JOIN product AS pd ON pd.maker = tt.maker AND pd.type IN ('Printer')
 
-union
+UNION
 
 SELECT tt.* 
 FROM tt 
