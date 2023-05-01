@@ -9,7 +9,7 @@ WITH tc AS (
 	FROM pass_in_trip AS pit 
 	JOIN trip AS t ON t.trip_no = pit.trip_no 
 	GROUP BY id_psg 
-	HAVING count(distinct t.id_comp) = 1)
+	HAVING COUNT(DISTINCT t.id_comp) = 1)
 
 SELECT p.name
       ,a.trip_qty
